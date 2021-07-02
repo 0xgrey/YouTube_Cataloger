@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
+import sys
+
+sys.path.insert(1, '../')
+
 import config
 from datetime import datetime
-from utils import *
-
+from YouTube_Cataloger.utils import *
 # Test utils.py API
 # Proof of Concept: John Hammond's YouTube Channel (https://www.youtube.com/user/RootOfTheNull)
 # John Hammond's YouTube Username: RootOfTheNull
