@@ -128,4 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-YouTube_Cataloger/config.py
+./YouTube_Cataloger/config.py
