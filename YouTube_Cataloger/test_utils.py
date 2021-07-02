@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import config
+from datetime import datetime
 from utils import *
 
 # Test utils.py API
@@ -33,7 +34,13 @@ channel_id = get_channel_id('RootOfTheNull')
 # all_cataloged_videos_timestamped = catalog_all_timestamped_videos(channel_id)
 
 # Get Recent Activity
+# Get Current Time in Zulu Format: datetime.utcnow().isoformat()[:-3] + 'Z'
+# datetime(2021, 1, 1).isoformat() + 'Z'
 recent_activity = get_recent_activity(channel_id)
+
+before_time = datetime(2021, 6, 30).isoformat() + 'Z'
+after_time = datetime(2021, 6, 1).isoformat() + 'Z'
+recent_activity_with_dates = get_recent_activity(channel_id, published_before=before_time, published_after=after_time)
 
 
 
@@ -69,7 +76,5 @@ recent_activity = get_recent_activity(channel_id)
 # Recent Channel Activity
 print(json.dumps(recent_activity, indent=4))
 
-
-
-
-# datetime.utcnow().isoformat()[:-3] + 'Z'
+# Recent Channel Activity With Before And After Dates
+print(json.dumps(recent_activity_with_dates, indent=4))
