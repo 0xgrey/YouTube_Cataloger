@@ -135,3 +135,14 @@ def catalog_all_timestamped_videos(channel_id):
     videos = catalog_all_videos(channel_id)
     videos = timestamp_videos(videos)
     return videos
+
+def get_recent_activity(channel_id, published_before=None, published_after=None):
+    request = youtube_api.activities().list(
+        part='snippet',
+        channelId=channel_id,
+        maxResults=50,
+        publishedBefore=published_before,
+        publishedAfter=published_after
+    )
+    response = request.execute()
+    return response

@@ -9,7 +9,7 @@ from utils import *
 
 
 # Get Channel ID
-# channel_id = get_channel_id('RootOfTheNull')
+channel_id = get_channel_id('RootOfTheNull')
 
 # Get All Channel Statistics (Includes superfluous information)
 # all_channel_stats = get_all_channel_statistics(channel_id)
@@ -31,6 +31,9 @@ from utils import *
 
 # Catalog All Videos Timestamped
 # all_cataloged_videos_timestamped = catalog_all_timestamped_videos(channel_id)
+
+# Get Recent Activity
+recent_activity = get_recent_activity(channel_id)
 
 
 
@@ -62,3 +65,11 @@ from utils import *
 
 # Catalog All Videos Timestamped
 # print(json.dumps(all_videos_timestamped, indent=4))
+
+# Recent Channel Activity
+print(json.dumps(recent_activity, indent=4))
+
+
+
+
+# datetime.utcnow().isoformat()[:-3] + 'Z'
