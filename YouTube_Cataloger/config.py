@@ -1,2 +1,2 @@
 # YouTube API Key
-YT_API_KEY = 'AIzaSyDwUpFDr4QH552LLwA3DZ0MkC569thLgJ4'
+YT_API_KEY = 'a'
